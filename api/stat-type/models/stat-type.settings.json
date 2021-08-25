@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stat_types",
+  "info": {
+    "name": "Stat Type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "strength": {
+      "type": "integer",
+      "max": 10,
+      "min": 0,
+      "required": true
+    },
+    "magic": {
+      "type": "integer",
+      "required": true,
+      "max": 10,
+      "min": 0
+    },
+    "intellect": {
+      "type": "integer",
+      "required": true,
+      "max": 10,
+      "min": 0
+    },
+    "endurance": {
+      "type": "integer",
+      "required": true,
+      "max": 10,
+      "min": 0
+    },
+    "swiftness": {
+      "type": "integer",
+      "max": 10,
+      "min": 0,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "characters",
+  "info": {
+    "name": "characters",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "bio": {
+      "type": "text",
+      "unique": true
+    },
+    "categories": {
+      "collection": "category",
+      "via": "characters",
+      "dominant": true
+    },
+    "stats": {
+      "model": "stat-type"
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "DMG",
+        "TANK",
+        "MAGE"
+      ],
+      "required": true,
+      "unique": false,
+      "default": "DMG"
+    }
+  }
+}
