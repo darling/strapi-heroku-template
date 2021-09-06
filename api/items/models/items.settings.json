@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "Items",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "Item": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Cover": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "FlavorText": {
+      "type": "text",
+      "required": true
+    },
+    "actions": {
+      "collection": "item-actions",
+      "via": "items",
+      "dominant": true
+    },
+    "purchaseable": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "Price": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

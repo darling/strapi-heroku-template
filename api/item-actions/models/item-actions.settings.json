@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_actions",
+  "info": {
+    "name": "Item Actions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "items": {
+      "via": "actions",
+      "collection": "items"
+    }
+  }
+}
