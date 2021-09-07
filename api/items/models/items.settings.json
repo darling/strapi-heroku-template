@@ -38,10 +38,6 @@
       "required": false,
       "pluginOptions": {}
     },
-    "Description": {
-      "type": "text",
-      "required": true
-    },
     "FlavorText": {
       "type": "text",
       "required": true
@@ -58,6 +54,10 @@
     },
     "Price": {
       "type": "integer",
+      "required": true
+    },
+    "desc": {
+      "type": "richtext",
       "required": true
     }
   }
