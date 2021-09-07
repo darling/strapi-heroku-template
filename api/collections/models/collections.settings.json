@@ -25,11 +25,12 @@
       "required": false,
       "pluginOptions": {}
     },
-    "items": {
-      "collection": "items"
-    },
     "description": {
       "type": "richtext"
+    },
+    "shop_items": {
+      "via": "collections",
+      "collection": "shop-items"
     }
   }
 }

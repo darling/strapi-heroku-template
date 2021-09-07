@@ -8,24 +8,18 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "Title": {
       "type": "string"
     },
-    "items": {
-      "via": "actions",
-      "collection": "items"
-    },
     "cover": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false,
@@ -34,6 +28,10 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "items": {
+      "via": "categories",
+      "collection": "shop-items"
     }
   }
 }
