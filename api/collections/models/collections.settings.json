@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "name": "Collections"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "items": {
+      "collection": "items"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
