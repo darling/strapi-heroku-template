@@ -30,6 +30,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }
