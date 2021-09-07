@@ -43,8 +43,8 @@
       "required": true
     },
     "actions": {
-      "collection": "item-actions",
       "via": "items",
+      "collection": "item-actions",
       "dominant": true
     },
     "purchaseable": {
