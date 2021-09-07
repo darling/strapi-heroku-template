@@ -31,8 +31,8 @@
       "unique": true
     },
     "categories": {
-      "collection": "category",
       "via": "characters",
+      "collection": "category",
       "dominant": true
     },
     "stats": {
