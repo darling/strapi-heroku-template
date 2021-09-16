@@ -22,32 +22,9 @@
       "unique": true,
       "required": true
     },
-    "uid": {
-      "type": "uid",
-      "targetField": "name"
-    },
     "bio": {
       "type": "text",
       "unique": true
-    },
-    "categories": {
-      "via": "characters",
-      "collection": "category",
-      "dominant": true
-    },
-    "stats": {
-      "model": "stat-type"
-    },
-    "class": {
-      "type": "enumeration",
-      "enum": [
-        "DMG",
-        "TANK",
-        "MAGE"
-      ],
-      "required": true,
-      "unique": false,
-      "default": "DMG"
     }
   }
 }
